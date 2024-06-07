@@ -2,6 +2,9 @@ from fastapi import FastAPI
 import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
+import subprocess
+
+subprocess.run(["streamlit", "run", "app/main.py", "--server.port", "8000", "--server.headless", "true"])
 
 app = FastAPI()
 
